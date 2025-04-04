@@ -1,0 +1,170 @@
+import styled, { createGlobalStyle } from "styled-components";
+import * as colors from "../config/colors";
+import "react-toastify/dist/ReactToastify.css";
+
+export default createGlobalStyle`
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  background: ${colors.primaryDarkColor};
+  color: ${colors.infoColor};
+}
+
+html, body, #root{
+  height: 100%;
+}
+
+button{
+  width:62px;
+  height:62px;
+  cursor: pointer;
+  background: ${colors.buttonColor};
+  border:none;
+  color:#fff;
+  position:relative;
+  left:230px;
+  bottom:62px;
+  border-radius: 10px;
+  border: 1px solid #DDDDDD;
+}
+
+`;
+export const Container = styled.section`
+  width: 1156px;
+  height: 537px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  margin: 100px;
+  background: black;
+  z-index: 2;
+
+  input {
+    width: 503px;
+    height: 62px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+  }
+
+  .div-resposta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 804px;
+    height: 257px;
+    border-radius: 25px;
+    background-color: #d9d9d9;
+  }
+
+  .div-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 448px;
+    height: 80px;
+    gap: 30px;
+  }
+  .div-texto h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+    color: #005cff;
+  }
+  .div-texto p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 100%;
+    color: #000000;
+  }
+
+  .resposta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    height: 220px;
+  }
+
+  .error-busca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 718px;
+    height: 88px;
+    border-radius: 10px;
+    background: #d9d9d9;
+  }
+  .error-busca p {
+    width: 497px;
+    height: 54px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400px;
+    color: ${colors.errorColor};
+  }
+
+  .radial-bottom {
+    z-index: 1;
+    width: 674px;
+    height: 674px;
+    border-radius: 100%;
+    position: absolute;
+    background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
+  }
+
+  .image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 2px solid #005cff;
+  }
+`;
+
+export const DivInput = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 384px;
+  height: 82px;
+  margin: 0 auto;
+`;
+export const DivRadialUm = styled.div`
+  z-index: 3;
+  width: 674px;
+  height: 674px;
+  border-radius: 100%;
+  position: absolute;
+  top: 100px;
+  transform: translateX(-530px);
+  background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
+`;
+
+export const DivRadialDois = styled.div`
+  z-index: 1;
+  width: 674px;
+  height: 674px;
+  border-radius: 100%;
+  position: absolute;
+  top: -150px;
+  right: 0px;
+  transform: translateX(150px);
+  background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
+`;
+export const DivElemento = styled.div`
+  width: 239px;
+  height: 225;
+  position: absolute;
+  left: 35px;
+  top: 15px;
+  z-index: 0;
+`;
