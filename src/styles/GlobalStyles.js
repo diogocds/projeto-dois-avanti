@@ -15,10 +15,12 @@ body{
   font-family: sans-serif;
   background: ${colors.primaryDarkColor};
   color: ${colors.infoColor};
+  overflow-x: hidden;
 }
 
 html, body, #root{
   height: 100%;
+
 }
 
 button{
@@ -39,7 +41,7 @@ button{
   button{
   width:52px;
   height:52px;
-  left:130px;
+  left:138px;
   bottom:52px;
 }
 }
@@ -143,7 +145,6 @@ export const Container = styled.section`
   @media ${device.mobile} {
     width: 95%;
     height: 100%;
-
     input {
       width: 80%;
       height: 52px;
@@ -211,15 +212,13 @@ export const DivRadialUm = styled.div`
   height: 674px;
   border-radius: 100%;
   position: absolute;
-  top: 100px;
-  transform: translateX(-530px);
+  top: 150px;
+  left: -500px;
   background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
 
   @media ${device.mobile} {
-    width: 174px;
-    height: 174px;
-    top: 350px;
-    transform: translateX(-50px);
+    top: 200px;
+    left: -530px;
   }
 `;
 
@@ -229,15 +228,15 @@ export const DivRadialDois = styled.div`
   height: 674px;
   border-radius: 100%;
   position: absolute;
-  top: -150px;
-  right: 0px;
-  transform: translateX(150px);
+  top: -200px;
+  right: -200px;
   background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
 
   @media ${device.mobile} {
-    width: 200px;
-    height: 200px;
-    top: -25px;
+    width: 500px;
+    height: 500px;
+    top: -200px;
+    right: -400px;
   }
 `;
 export const DivElemento = styled.div`
@@ -253,6 +252,5 @@ export const DivElemento = styled.div`
     height: 100px;
     left: 70px;
     top: 55px;
-    overflow: hidden;
   }
 `;
