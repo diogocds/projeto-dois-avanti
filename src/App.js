@@ -1,5 +1,4 @@
 import React from "react";
-
 import Consulta from "./pages/perfil/Consulta";
 import GlobalStyle from "./styles/GlobalStyles";
 

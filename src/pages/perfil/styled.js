@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { device } from "../../styles/breakpoints";
 
 export const Title = styled.h1`
   display: flex;
@@ -7,7 +8,7 @@ export const Title = styled.h1`
   font-size: 60px;
   gap: 5px;
   line-height: 100%;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 
   .git-logo {
     width: 58px;
@@ -16,5 +17,17 @@ export const Title = styled.h1`
   .git-texto {
     width: 160px;
     height: 45px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 40px;
+    .git-logo {
+      width: 38px;
+      height: 38px;
+    }
+    .git-texto {
+      width: 130px;
+      height: 35px;
+    }
   }
 `;

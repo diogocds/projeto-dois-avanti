@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import * as colors from "../config/colors";
+import { device } from "../styles/breakpoints";
 import "react-toastify/dist/ReactToastify.css";
 
 export default createGlobalStyle`
@@ -32,6 +33,15 @@ button{
   bottom:62px;
   border-radius: 10px;
   border: 1px solid #DDDDDD;
+}
+
+@media ${device.mobile}{
+  button{
+  width:52px;
+  height:52px;
+  left:130px;
+  bottom:52px;
+}
 }
 
 `;
@@ -129,11 +139,68 @@ export const Container = styled.section`
     border-radius: 50%;
     border: 2px solid #005cff;
   }
+
+  @media ${device.mobile} {
+    width: 95%;
+    height: 100%;
+
+    input {
+      width: 80%;
+      height: 52px;
+      padding-left: 10px;
+      border-radius: 10px;
+      border: 1px solid #dddddd;
+    }
+    .div-resposta {
+      width: 95%;
+      height: 257px;
+    }
+
+    .radial-bottom {
+      width: 174px;
+      height: 174px;
+    }
+
+    .error-busca {
+      width: 90%;
+    }
+
+    .error-busca p {
+      width: 80%;
+      font-size: 16px;
+    }
+
+    .div-texto {
+      width: 95%;
+      height: 80px;
+      gap: 10px;
+    }
+    .div-texto h2 {
+      font-size: 16px;
+    }
+    .div-texto p {
+      font-size: 12px;
+    }
+
+    .resposta {
+      width: 90%;
+      height: 220px;
+      gap: 10px;
+    }
+
+    .image img {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #005cff;
+    }
+  }
 `;
 
 export const DivInput = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 384px;
   height: 82px;
   margin: 0 auto;
@@ -147,6 +214,13 @@ export const DivRadialUm = styled.div`
   top: 100px;
   transform: translateX(-530px);
   background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
+
+  @media ${device.mobile} {
+    width: 174px;
+    height: 174px;
+    top: 350px;
+    transform: translateX(-50px);
+  }
 `;
 
 export const DivRadialDois = styled.div`
@@ -159,6 +233,12 @@ export const DivRadialDois = styled.div`
   right: 0px;
   transform: translateX(150px);
   background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
+
+  @media ${device.mobile} {
+    width: 200px;
+    height: 200px;
+    top: -25px;
+  }
 `;
 export const DivElemento = styled.div`
   width: 239px;
@@ -167,4 +247,12 @@ export const DivElemento = styled.div`
   left: 35px;
   top: 15px;
   z-index: 0;
+
+  @media ${device.mobile} {
+    width: 100px;
+    height: 100px;
+    left: 70px;
+    top: 55px;
+    overflow: hidden;
+  }
 `;
