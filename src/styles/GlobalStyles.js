@@ -16,6 +16,7 @@ body{
   background: ${colors.primaryDarkColor};
   color: ${colors.infoColor};
   overflow-x: hidden;
+
 }
 
 html, body, #root{
@@ -41,27 +42,29 @@ button{
   button{
   width:52px;
   height:52px;
-  left:138px;
+  left:145px;
   bottom:52px;
 }
 }
 
 `;
 export const Container = styled.section`
-  width: 1156px;
-  height: 537px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  justify-content: center;
-  margin: 100px;
+  width: 1156px;
+  height: 537px;
   background: black;
+  top: 137px;
+  left: 100px;
   z-index: 2;
 
   input {
     width: 503px;
     height: 62px;
+    top: 285px;
+    left: 469px;
     padding-left: 10px;
     border-radius: 10px;
     border: 1px solid #dddddd;
@@ -73,6 +76,8 @@ export const Container = styled.section`
     justify-content: center;
     width: 804px;
     height: 257px;
+    top: 380px;
+    left: 318px;
     border-radius: 25px;
     background-color: #d9d9d9;
   }
@@ -126,15 +131,6 @@ export const Container = styled.section`
     color: ${colors.errorColor};
   }
 
-  .radial-bottom {
-    z-index: 1;
-    width: 674px;
-    height: 674px;
-    border-radius: 100%;
-    position: absolute;
-    background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
-  }
-
   .image img {
     width: 220px;
     height: 220px;
@@ -143,7 +139,9 @@ export const Container = styled.section`
   }
 
   @media ${device.mobile} {
-    width: 95%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
     height: 100%;
     input {
       width: 80%;
@@ -204,7 +202,7 @@ export const DivInput = styled.div`
   justify-content: center;
   width: 384px;
   height: 82px;
-  margin: 0 auto;
+  padding: 60px;
 `;
 export const DivRadialUm = styled.div`
   z-index: 3;
@@ -212,45 +210,41 @@ export const DivRadialUm = styled.div`
   height: 674px;
   border-radius: 100%;
   position: absolute;
-  top: 150px;
-  left: -500px;
+  top: 198px;
+  left: -415px;
   background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
 
   @media ${device.mobile} {
-    top: 200px;
-    left: -530px;
+    width: 374px;
+    height: 374px;
+    top: 298px;
+    left: -315px;
   }
 `;
 
 export const DivRadialDois = styled.div`
   z-index: 1;
-  width: 674px;
-  height: 674px;
+  width: 888px;
+  height: 888px;
   border-radius: 100%;
   position: absolute;
-  top: -200px;
-  right: -200px;
+  top: -396px;
+  left: 954px;
   background: radial-gradient(closest-side, #005cff, rgba(0, 0, 0, 0));
 
   @media ${device.mobile} {
-    width: 500px;
-    height: 500px;
-    top: -200px;
-    right: -400px;
+    display: none;
   }
 `;
 export const DivElemento = styled.div`
   width: 239px;
-  height: 225;
+  height: 225px;
   position: absolute;
-  left: 35px;
-  top: 15px;
+  top: 28px;
+  left: 31px;
   z-index: 0;
 
   @media ${device.mobile} {
-    width: 100px;
-    height: 100px;
-    left: 70px;
-    top: 55px;
+    display: none;
   }
 `;
